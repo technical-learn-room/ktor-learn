@@ -1,3 +1,6 @@
 ### Ktor Framework란?
-`Ktor Framework`는  
-코루틴을 기반으로하여 `Asynchronous`하고 `inlining`과 `수신 객체 지정 람다`를 통해 가볍고 가독성이 좋은 `Web Framework`입니다.  
+`Ktor Framework`는 주로 코틀린을 대상으로한 `Web Framework`입니다.
+
+특히 라우팅을 하는 부분에서부터 `suspend` 함수로 작성되어 있기 때문에 쉽게 코루틴을 적용할 수 있는 환경이 마련되어 있고,  
+많은 함수들이 `inline function`으로 정의되어 있기 때문에 스프링보다 가벼운 개발이 가능합니다.  
+또한 수식 객체 지정 람다와 같은 문법을 통해 읽기 좋은 코드를 작성할 수 있습니다.  
