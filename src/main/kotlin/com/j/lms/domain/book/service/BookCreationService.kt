@@ -1,8 +1,18 @@
 package com.j.lms.domain.book.service
 
-class BookCreationService {
+import com.j.lms.domain.book.dao.BookDataAccessor
+import com.j.lms.domain.book.entity.Book
 
-    fun createBook() {
-
+class BookCreationService(
+    private val bookDataAccessor: BookDataAccessor<Book, Long>,
+) {
+    fun createBook(bookName: String, bookAuthor: String, bookPrice: Int, libraryId: Long) {
+        val newBook = Book(
+            name = bookName,
+            author = bookAuthor,
+            price = bookPrice,
+            libraryId = libraryId,
+        )
+        bookDataAccessor.save(newBook)
     }
 }
