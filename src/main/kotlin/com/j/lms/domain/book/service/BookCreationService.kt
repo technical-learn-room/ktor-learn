@@ -6,7 +6,8 @@ import com.j.lms.domain.book.entity.Book
 class BookCreationService(
     private val bookDataAccessor: BookDataAccessor<Book, Long>,
 ) {
-    fun createBook(bookName: String, bookAuthor: String, bookPrice: Int, libraryId: Long) {
+
+    fun create(bookName: String, bookAuthor: String, bookPrice: Int, libraryId: Long) {
         val newBook = Book(
             name = bookName,
             author = bookAuthor,

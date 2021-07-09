@@ -18,11 +18,11 @@ fun Route.configureBookRoute() {
 }
 
 private fun Route.searchBook() {
-    get(path = "/books") {
+    get(path = "/libraries/{libraryId}/books") {
 
     }
 
-    get(path = "/books/{bookId}") {
+    get(path = "/libraries/{libraryId}/books/{bookId}") {
 
     }
 }
@@ -30,10 +30,10 @@ private fun Route.searchBook() {
 private fun Route.registerBook() {
     val bookCreationService by closestDI().instance<BookCreationService>()
 
-    post(path = "/books") {
+    post(path = "/libraries/{libraryId}/books") {
         val request = call.receive<BookCreationRequest>()
 
-        bookCreationService.createBook(
+        bookCreationService.create(
             bookName = request.book.name,
             bookAuthor = request.book.author,
             bookPrice = request.book.price,
@@ -45,13 +45,13 @@ private fun Route.registerBook() {
 }
 
 private fun Route.modifyBook() {
-    patch(path = "/books/{bookId}/name") {
+    patch(path = "/libraries/{libraryId}/books/{bookId}/name") {
 
     }
 }
 
 private fun Route.unregisterBook() {
-    delete(path = "/books/{bookId}") {
+    delete(path = "/libraries/{libraryId}/books/{bookId}") {
 
     }
 }
