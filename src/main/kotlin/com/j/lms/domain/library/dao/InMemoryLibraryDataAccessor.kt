@@ -27,4 +27,6 @@ class InMemoryLibraryDataAccessor : LibraryDataAccessor<Library, Long> {
     override fun deleteById(libraryId: Long) {
         database.remove(libraryId)
     }
+
+    override fun existsById(libraryId: Long) = database[libraryId] != null
 }

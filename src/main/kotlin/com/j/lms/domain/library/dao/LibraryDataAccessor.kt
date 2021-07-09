@@ -7,4 +7,5 @@ interface LibraryDataAccessor<E : Any, ID : Any> {
     fun updateNameById(libraryId: ID, newName: String)
     fun updateLocationById(libraryId: ID, newLocation: String)
     fun deleteById(libraryId: ID)
+    fun existsById(libraryId: ID): Boolean
 }

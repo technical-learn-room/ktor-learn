@@ -12,11 +12,25 @@ class InMemoryBookDataAccessor : BookDataAccessor<Book, Long> {
 
     private fun generateBookId() = database.keys.maxOf { it } + 1
 
-    override fun findById(id: Long) = database[id]
+    override fun findById(libraryId: Long, bookId: Long): Book? {
+        val book = database[bookId]
+        if (book?.libraryId == libraryId) {
+            return book
+        }
+        return null
+    }
 
     override fun findAll() = database.values
 
-    override fun updateNameById(id: Long, newName: String) {
-        database[id]?.modifyBookName(newName)
+    override fun findAllByLibraryId(libraryId: Long) =
+        findAll().filter { it.libraryId == libraryId }
+
+    override fun updateNameById(libraryId: Long, bookId: Long, newBookName: String) {
+        val book = findById(libraryId, bookId)
+        book?.modifyBookName(newBookName)
+    }
+
+    override fun deleteById(libraryId: Long, bookId: Long) {
+        database.remove(bookId)
     }
 }

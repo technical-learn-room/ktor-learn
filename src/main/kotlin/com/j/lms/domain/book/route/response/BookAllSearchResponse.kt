@@ -1,7 +1,7 @@
 package com.j.lms.domain.book.route.response
 
-data class BookSearchResponse(
-    val book: BookAttribute,
+data class BookAllSearchResponse(
+    val books: List<BookAttribute>
 ) {
 
     data class BookAttribute(
