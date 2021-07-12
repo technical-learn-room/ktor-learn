@@ -1,6 +1,6 @@
-package com.j.lms.domain.book.route.request
+package com.j.lms.domain.book.router.response
 
-data class BookCreationRequest(
+data class BookSearchResponse(
     val book: BookAttribute,
 ) {
 
@@ -8,6 +8,5 @@ data class BookCreationRequest(
         val name: String,
         val author: String,
         val price: Int,
-        val libraryId: Long,
     )
 }

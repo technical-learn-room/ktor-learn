@@ -1,4 +1,4 @@
-package com.j.lms.domain.book.route.response
+package com.j.lms.domain.book.router.response
 
 data class BookAllSearchResponse(
     val books: List<BookAttribute>

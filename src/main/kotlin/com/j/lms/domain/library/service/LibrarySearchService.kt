@@ -3,8 +3,8 @@ package com.j.lms.domain.library.service
 import com.j.lms.domain.library.dao.LibraryDataAccessor
 import com.j.lms.domain.library.entity.Library
 import com.j.lms.domain.library.exception.LibraryNotFoundException
-import com.j.lms.domain.library.route.response.LibraryAllSearchResponse
-import com.j.lms.domain.library.route.response.LibrarySearchResponse
+import com.j.lms.domain.library.router.response.LibraryAllSearchResponse
+import com.j.lms.domain.library.router.response.LibrarySearchResponse
 
 class LibrarySearchService(
     private val libraryDataAccessor: LibraryDataAccessor<Library, Long>,

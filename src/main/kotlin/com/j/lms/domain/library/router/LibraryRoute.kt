@@ -1,9 +1,9 @@
-package com.j.lms.domain.library.route
+package com.j.lms.domain.library.router
 
-import com.j.lms.domain.library.route.request.LibraryCreationRequest
-import com.j.lms.domain.library.route.request.LibraryLocationModificationRequest
-import com.j.lms.domain.library.route.request.LibraryNameModificationRequest
-import com.j.lms.domain.library.route.response.LibraryAllSearchResponse
+import com.j.lms.domain.library.router.request.LibraryCreationRequest
+import com.j.lms.domain.library.router.request.LibraryLocationModificationRequest
+import com.j.lms.domain.library.router.request.LibraryNameModificationRequest
+import com.j.lms.domain.library.router.response.LibraryAllSearchResponse
 import com.j.lms.domain.library.service.LibraryCreationService
 import com.j.lms.domain.library.service.LibraryDeletionService
 import com.j.lms.domain.library.service.LibraryModificationService
@@ -22,6 +22,10 @@ fun Route.configureLibraryRoute() {
     registerLibrary()
     modifyLibrary()
     unregisterLibrary()
+
+    get(path = "/a") {
+        call.respond(HttpStatusCode.OK, "hello")
+    }
 }
 
 private fun Route.searchLibrary() {

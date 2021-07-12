@@ -1,4 +1,4 @@
-package com.j.lms.domain.library.route.response
+package com.j.lms.domain.library.router.response
 
 data class LibraryAllSearchResponse(
     val libraries: List<LibraryAttribute>,

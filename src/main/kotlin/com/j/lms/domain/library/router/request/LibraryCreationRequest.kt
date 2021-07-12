@@ -1,6 +1,6 @@
-package com.j.lms.domain.library.route.response
+package com.j.lms.domain.library.router.request
 
-data class LibrarySearchResponse(
+data class LibraryCreationRequest(
     val library: LibraryAttribute,
 ) {
 

@@ -3,8 +3,8 @@ package com.j.lms.domain.book.service
 import com.j.lms.domain.book.dao.BookDataAccessor
 import com.j.lms.domain.book.entity.Book
 import com.j.lms.domain.book.exception.BookNotFoundException
-import com.j.lms.domain.book.route.response.BookAllSearchResponse
-import com.j.lms.domain.book.route.response.BookSearchResponse
+import com.j.lms.domain.book.router.response.BookAllSearchResponse
+import com.j.lms.domain.book.router.response.BookSearchResponse
 
 class BookSearchService(
     private val bookDataAccessor: BookDataAccessor<Book, Long>,

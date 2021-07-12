@@ -1,9 +1,9 @@
-package com.j.lms.domain.book.route
+package com.j.lms.domain.book.router
 
-import com.j.lms.domain.book.route.request.BookCreationRequest
-import com.j.lms.domain.book.route.request.BookNameModificationRequest
-import com.j.lms.domain.book.route.response.BookAllSearchResponse
-import com.j.lms.domain.book.route.response.BookSearchResponse
+import com.j.lms.domain.book.router.request.BookCreationRequest
+import com.j.lms.domain.book.router.request.BookNameModificationRequest
+import com.j.lms.domain.book.router.response.BookAllSearchResponse
+import com.j.lms.domain.book.router.response.BookSearchResponse
 import com.j.lms.domain.book.service.BookCreationService
 import com.j.lms.domain.book.service.BookDeletionService
 import com.j.lms.domain.book.service.BookModificationService
