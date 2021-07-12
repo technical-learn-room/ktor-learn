@@ -198,3 +198,9 @@ src
           ㄴ application.conf
           ㄴ logback.xml
 ```
+
+## Library & Framework
+- Kotlin 1.5.20
+- Ktor 1.6.1
+- Kodein 7.6.3
+- Logback 1.2.3
