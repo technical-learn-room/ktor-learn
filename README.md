@@ -166,3 +166,35 @@ fun DI.MainBuilder.bindServices() {
 ```kotlin
 val libraryCreationService by closestDI().instance<LibraryCreationService>()
 ```
+
+## Ktor Project Structure
+```
+src
+  ㄴ main
+      ㄴ kotlin.com.j.lms
+          ㄴ domain
+              ㄴ book
+                  ㄴ dao
+                  ㄴ entity
+                  ㄴ exception
+                  ㄴ router
+                      ㄴ request
+                      ㄴ response
+                  ㄴ service
+              ㄴ library
+                  ㄴ dao
+                  ㄴ entity
+                  ㄴ exception
+                  ㄴ router
+                      ㄴ request
+                      ㄴ response
+                  ㄴ service
+          ㄴ global
+              ㄴ configuration
+              ㄴ exception
+          ㄴ ApiRoute.kt
+          ㄴ Application.kt
+      ㄴ resources
+          ㄴ application.conf
+          ㄴ logback.xml
+```
